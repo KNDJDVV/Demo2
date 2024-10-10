@@ -15,5 +15,17 @@ namespace Mylibrary
         public decimal UnitPrice => unitprice;
         public int UnitsInStock => unitsInStock;
      
+        public bool Discontinued { get; private set; }
+
+        public void SetDiscontinued ()
+            { 
+            
+            Discontinued = true; 
+        }
+
+        public bool GetStatus () 
+            { 
+            return Discontinued; 
+        }
     }
 }
