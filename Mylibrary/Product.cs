@@ -9,10 +9,21 @@ namespace Mylibrary
     public class Product
     {
 
-       public int id {  get; set; }
+       public int Id {  get; }
 
-        public string Name { get; set; }
-        public decimal UnitPrice {  get; set; }
-        public int unitsInStock { get; set; }
+        public string Name { get;  }
+        public decimal UnitPrice {  get; }
+        public int UnitsInStock { get;  }
+
+        //Constructor
+
+        public Product(int id, string name, decimal unitprice, int unitsInStock)
+        {
+            Id = id;
+            Name = name;
+            UnitPrice = unitprice;
+            UnitsInStock = unitsInStock;
+        }
+
     }
 }
