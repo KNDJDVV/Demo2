@@ -1,7 +1,18 @@
 ﻿using Mylibrary;
 
-int id = 5;
-String Name = "Hello";
+Secretary Maria = new Secretary();
+Maria.Name = "Maria";
+Manager Pedro = new Manager();
+Pedro.Name = "Pedro";
+Developer Miguel = new Developer();
+Console.WriteLine($"Dias: {Miguel.GetPaymentDays()}");
 
-Product Leche;
-Leche = new Product(1, "Leche entera", 19, 100);
+WriteEmployerInfo(Maria);
+WriteEmployerInfo(Miguel);
+WriteEmployerInfo(Pedro);
+
+void WriteEmployerInfo(Employer employer)
+{
+    Console.WriteLine($"{employer.Name}: {employer.CalculateMonthlyPayment()}");
+    Console.WriteLine($"Days: {employer.GetPaymentDays()}");
+}
